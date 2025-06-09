@@ -13,7 +13,7 @@ function Service() {
         if (userentry === '' || userentry === null) {
             navigate('/Login')
         }
-    }, []);
+    }, [navigate]);
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);

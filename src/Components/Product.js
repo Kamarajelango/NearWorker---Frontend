@@ -12,7 +12,7 @@ function Product() {
         if (userentry === '' || userentry === null) {
             navigate('/Login')
         }
-    }, []);
+    }, [navigate]);
     const params = useParams()
     const props = ProductList.find((element) => element.id === parseInt(params.id))
     return <>

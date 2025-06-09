@@ -14,7 +14,7 @@ function Register() {
        useEffect(()=>{
         if(localStorage.getItem("Email"))
         navigate("/Home")
-    },[])
+    },[navigate])
 
     const validateSchema = Joi.object({
         name: Joi.string().min(3).max(15).required(),
@@ -62,7 +62,7 @@ function Register() {
             //API CALL
             (async () => {
                 try {
-                    const response = await axios.post('https://63c7b9bc075b3f3a91d193b8.mockapi.io/users', { name, email, password, address, pincode, mobile })
+                    await axios.post('https://63c7b9bc075b3f3a91d193b8.mockapi.io/users', { name, email, password, address, pincode, mobile })
                     toast.success('Registered Successfully')
                     navigate('/login')
                 } catch (error) {

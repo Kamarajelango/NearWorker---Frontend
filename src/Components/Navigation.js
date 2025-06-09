@@ -28,7 +28,7 @@ function Navigation() {
     useEffect(() => {
         if (!localStorage.getItem("Email"))
             navigate('/Login')
-    }, [signout])
+    }, [signout,navigate])
 
     const handleSignout = () => {
         localStorage.clear();

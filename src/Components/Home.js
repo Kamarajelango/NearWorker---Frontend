@@ -13,7 +13,7 @@ function Home() {
     if (userentry === '' || userentry === null) {
       navigate('/Login')
     }
-  }, []);
+  }, [navigate]);
   return <>
     <Navigation />
     <div className='container'>
